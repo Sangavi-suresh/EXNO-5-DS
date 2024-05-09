@@ -1,3 +1,4 @@
+
 # EXNO-5-DS-DATA VISUALIZATION USING MATPLOT LIBRARY
 
 # Aim:
@@ -18,124 +19,141 @@ STEP 4:Apply the various data visualization tools wherever necessary.
 STEP 5:Include Necessary parameters in each functions.
 
 # Coding and Output:
+```
+import matplotlib.pyplot as plt
+x_values=[0,1,2,3,4,5]
+y_values=[0,1,4,9,16,25]
+plt.plot(x_values,y_values)
+plt.show()
+```
 
-Simple two lines:
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/93db2fee-2ba7-4d7d-bdf8-e68ed9b49311)
+
+```
+import matplotlib.pyplot as plt
+x=[1,2,3]
+y=[2,4,1]
+plt.plot(x,y)
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.title('My first graph!')
+plt.show()
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/c2deee25-8c14-46a3-b71d-4be3e08cf672)
 
 ```
 import matplotlib.pyplot as plt
 x1=[1,2,3]
-y1=[1,4,1]
-plt.plot(x1,y1, label="line 1", color="maroon", linewidth=2)
-
+y1=[2,4,1]
+plt.plot(x1,y1,label="line 1")
 x2=[1,2,3]
-y2=[4,1,4]
-plt.plot(x2,y2, label="line 2", color="black", linewidth=2)
-
+y2=[4,1,3]
+plt.plot(x2,y2,label="line 2")
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
-plt.title("Two lines on the same graph")
+plt.title('Two lines on same graph!')
 plt.legend()
-
+plt.show()
 ```
 
-![image](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/34660ea9-f6d2-4f0b-a049-5039cd7ff7de)
-
-Customization of plots:
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/05b65002-f6b9-4e7a-85d9-69c8f75d1ae9)
 
 ```
+import matplotlib.pyplot as plt
 x=[1,2,3,4,5,6]
 y=[2,4,1,5,2,6]
-plt.plot(x,y,color='grey', linestyle='dashed', linewidth=3, marker='o', markerfacecolor='maroon',markersize=10)
-
+plt.plot(x,y,color='green',linestyle='dashed',linewidth=3,marker='o',markerfacecolor='blue',markersize=12)
 plt.ylim(1,8)
 plt.xlim(1,8)
 
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
+plt.title('Some cool customizations!')
 
-plt.title("Customization of Plots")
-```
-
-![image](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/feeb5429-c7c5-4f82-aa91-6e994af2cb63)
-
-Implementation using Matplotlib:
-
-```
-
-yield_orange=[0.895, 0.91, 0.919, 0.926, 0.929, 0.931]
-plt.plot(yield_orange, color='sienna', linewidth=3)
-
-```
-
-![326153353-0e5e95df-fbc5-4932-ac5a-9d0473167431](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/fe20633a-53c4-4490-ab4f-add23db7ddd1)
-
-
-```
-years= [2010, 2011, 2012, 2013, 2014, 2015]
-yield_apples=[0.895, 0.91, 0.919, 0.926, 0.929, 0.931]
-plt.plot(years, yield_apples, color='chocolate', linewidth=3)
-
-```
-
-![326153371-97d24b81-513d-4e88-8db5-7b3ba45ad3be](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/6d673b4d-8230-45aa-96ec-4c1e166cdcfc)
-
-```
-years = range(2000, 2012) 
-apples = [0.895, 0.91, 0.919, 0.926, 0.929, 0.931, 0.934, 0.936, 0.937, 0.9375, 0.9372, 0.939]
-oranges = [0.962, 0.941, 0.930, 0.923, 0.918, 0.908, 0.907, 0.904, 0.901, 0.898, 0.9, 0.896, ] 
- 
-plt.xlabel('Year')
-plt.ylabel('Yield (tons per hectare)'); 
-
-
-plt.plot(years, apples)
-plt.plot(years, oranges)
-
-plt.xlabel( 'Year')
-plt.ylabel('Yield (tons per hectare)')
-plt.title("Crop Yields in Kanto")
-plt.legend(['Apples', 'Oranges'])
-
-```
-
-![326153387-40620a05-10f9-46c4-b1ef-fec22a2f44ce](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/6f4a0536-1643-43ce-9522-1fcf0cd86fb8)
-
-```
-
-plt.figure(figsize=(12, 6))
-plt.plot(years, oranges, marker='o')
-plt.title("vield of Oranges (tons per hectare)")
-
-```
-
-![326153417-7240f811-daee-4a9a-acb0-b7921fcecc67](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/a12957c3-5ae7-455c-b633-e057f33b2c52)
-
-```
-
-plt.plot(years, apples, marker='o')
-plt.plot(years, oranges, marker="x")
-plt.xlabel('Year') 
-plt.ylabel('Yield (tons per hectare)')
-plt.title("Crop Yields in Kanto")
-plt.legend([ 'Apples', 'Oranges'])
-
-```
-
-![326153441-1c1c071b-b001-407c-8f1f-d3a673443d18](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/40a7e97c-1010-4cc7-a0dd-38f1262f9dfd)
-
-Scatter Plot:
-
-```
-
-import matplotlib.pyplot as plt
-x_values = [0,1,2,3,4,5]
-y_values = [0,1,4,9,16,25]
-plt.scatter(x_values, y_values,s=30, color="blue") 
 plt.show()
 
 ```
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/2294d4a1-7afa-493b-ba13-eea14bf58d38)
 
-![326153462-376aa83f-e208-4672-994f-7101d575fa80](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/3a629e8b-1df7-41a4-9b09-5355554df716)
+```
+yield_apples=[0.895,0.91,0.919,0.926,0.929,0.931]
+plt.plot(yield_apples)
+
+```
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/1759e6f8-64ab-4668-a6d9-2083457dc0fa)
+
+```
+years=[2010,2011,2012,2013,2014,2015]
+yeild_apples=[0.895,0.91,0.919,0.926,0.929,0.931]
+plt.plot(years,yeild_apples)
+
+```
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/8d7de7e0-e60f-4a27-ad6c-7dae3125b549)
+
+```
+years=range(2000,2012)
+apples= [0.895,0.91,0.919,0.926,0.929,0.931,0.934,0.936,0.937,0.9375,0.9372,0.939]
+oranges=[0.962,0.941,0.930,0.923,0.918,0.908,0.907,0.904,0.901,0.898,0.9,0.896,]
+plt.plot(years,apples)
+plt.plot(years,oranges)
+plt.xlabel('Year')
+plt.ylabel('Yeild(tons per hectare)');
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/7f7c1cdb-b5e3-4fa0-bfaa-a758f3468e1e)
+
+```
+plt.plot(years,apples)
+plt.plot(years,oranges)
+plt.xlabel('Year')
+plt.ylabel('Yeild(tons per hectare)')
+plt.title("Crop Yeilds in Kanto")
+plt.legend(['Apples','Oranges']);
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/bffac794-5d8e-4696-ba5a-fdf995b5d7b6)
+
+```
+years=[2010,2011,2012,2013,2014,2015]
+yeild_apples=[0.895,0.91,0.919,0.926,0.929,0.931]
+plt.plot(years,yeild_apples)
+plt.xlabel('Year')
+plt.ylabel('Yeild(tons per hectare)');
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/4da08ae4-bbce-4a48-8b3e-2205eecf1e2d)
+
+```
+years=range(2000,2012)
+oranges=[0.962,0.941,0.930,0.923,0.918,0.908,0.907,0.904,0.901,0.898,0.9,0.896,]
+plt.figure(figsize=(12,6))
+plt.plot(years,oranges,marker='o')
+plt.title("Yeild of Oranges (tons per hectare)");
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/bbe836b1-fe5c-4962-9b5b-6d695aa8cc66)
+
+```
+plt.plot(years,apples,marker='o')
+plt.plot(years,oranges,marker='x')
+plt.xlabel('Year')
+plt.ylabel('Yeild(tons per hectare)')
+plt.title("Crop Yeilds in Kanto")
+plt.legend(['Apples','Oranges']);
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/dedd396a-e83b-4b91-8d1a-5fdcd78bd115)
+
+```
+import matplotlib.pyplot as plt
+x_values=[0,1,2,3,4,5]
+y_values=[0,1,4,9,16,25]
+plt.scatter(x_values,y_values,s=30,color="blue")
+plt.show()
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/493ffb54-af9e-41e4-ac31-fb0b49ff7811)
 
 ```
 import matplotlib.pyplot as plt
@@ -143,95 +161,183 @@ import numpy as np
 import pandas as pd
 x=np.arange(0,10)
 y=np.arange(11,21)
+x
 
-```
 
-![326153490-3c1770fb-7d88-4ed7-a150-55be14618969](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/ccf61672-684a-462e-ac85-f648c36f1288)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 
-![326153499-bef711a9-ddd6-49ff-bb17-26f3d080a123](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/b40b1586-13cf-4d10-8c47-3453a6adff85)
 
-```
+y
 
-plt.scatter(x,y,c="r")
-plt.xlabel( 'X axis')
+
+array([11, 12, 13, 14, 15, 16, 17, 18, 19, 20])
+
+
+
+plt.scatter(x,y,c='r')
+plt.xlabel('X axis')
 plt.ylabel('Y axis')
-plt.title( 'Graph in 2D')
+plt.title('Graph in 2D')
 plt.savefig('Test.png')
 
 ```
-
-![326153509-d582fdcc-f2f3-4503-bec8-81d05dfa8581](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/4e9a1673-0d76-40ab-9a91-166ea45be6a4)
-
-
-![326153520-7a01f98b-1e1f-47a5-a04e-c0720e308590](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/ecd6c8f6-baa5-4491-b72c-9316a3a8e1b7)
-
-```
-plt.plot(x,y, 'g*',linestyle='dashed' ,linewidth=2, markersize=12)
-plt.xlabel( 'X axis') 
-plt.ylabel( 'Y axis')
-plt.title('2d Diagram') 
-
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/8acee8db-9dd0-4ae0-91d4-42876ae11b9d)
 ```
 
-![326153537-c778f1eb-9e6d-4d85-aa87-dc115db5e1bb](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/66da38f6-6ad5-4060-82ef-6d372d513cde)
+y=x*x
+y
+
+array([ 0,  1,  4,  9, 16, 25, 36, 49, 64, 81])
 
 
-![326153543-1d0a16e4-1402-4725-9696-a66465327143](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/5ec7575f-1752-4b3b-a808-4eaf1c2bcf2f)
+
+plt.plot(x,y,'g*',linestyle='dashed',linewidth=2,markersize=12)
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('2d Diagram')
 
 ```
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/29adeffc-0967-434b-80e4-d78e9114a2cc)
 
-x = np.arange(0, 4 * np.pi, 0.1) 
-y= np.sin(x)
-plt.title('sine wave form')
-plt.plot(x, y)
+```
+np.pi
+
+
+3.141592653589793
+
+
+x=np.arange(0,4*np.pi,0.1)
+y=np.sin(x)
+plt.title("sine wave form")
+plt.plot(x,y)
 plt.show()
 
 ```
 
-![326153555-ecd74a1b-8eeb-44b4-a592-ea20184e73c1](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/37ecfe8b-5fa8-42c2-b2ff-0d0c1d125c92)
-
-Area Chart:
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/7c877f63-07bc-4b43-8c1f-630b615a8ba8)
 
 ```
-
-import matplotlib.pyplot as pit
+import matplotlib.pyplot as plt
 import numpy as np
 x=[1,2,3,4,5]
-y1=[10, 12, 14, 16, 18]
-y2=[5,7,9, 11, 13]
+y1=[10,12,14,16,18]
+y2=[5,7,9,11,13]
 y3=[2,4,6,8,10]
-pit.fill_between(x, y1, color='maroon')
-plt.fill_between(x, y2, color='orange') 
-plt.plot(x, y1, color='red')
-plt.plot(x, y2, color='black')
+plt.fill_between(x,y1,color="blue")
+plt.fill_between(x,y2,color="green")
+plt.plot(x,y1,color="red")
+plt.plot(x,y2,color="black")
 plt.legend(['y1','y2'])
 plt.show()
+```
+
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/a70aa17c-2503-429f-a59f-6defc86c99b3)
+
+```
+import matplotlib.pyplot as plt
+height=[10,24,36,40,5]
+names=['one','two','three','four','five']
+c1=['red','green']
+c2=['b','g']
+plt.bar(names,height,width=0.8,color=c1)
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.title('My bar chart!')
+plt.show()
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/8b3b1d07-f746-42cd-818e-cf9ec41b997c)
 
 ```
 
-![326153570-2237fffd-023e-465f-a62c-2553fbf81f5c](https://github.com/Sangavi-suresh/EXNO-5-DS/assets/118541861/544d75bd-75f3-40ff-9442-0ccbd1b0f0c4)
+x=[2,8,10]
+y=[11,16,9]
+x2=[3,9,11]
+y2=[6,15,11]
+plt.bar(x,y,color='r')
+plt.bar(x2,y2,color='g')
+plt.title('Bar graph')
+plt.ylabel('Y axis')
+plt.xlabel('X axis')
+plt.show()
+```
 
-import matplotlib.pyplot as pit
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/bfb1c2f6-a934-456c-8996-0443342dabeb)
+
+
+### histogram
+
+```
+import matplotlib.pyplot as plt
+ages=[2,5,70,40,30,45,50,45,50,45,43,40,44,60,7,13,57,18,90,77,32,21,20,40]
+range=(0,100)
+bins=10
+plt.hist(ages,bins,range,color='green',histtype='bar',rwidth=0.8)
+plt.xlabel('age')
+plt.ylabel('No.of people')
+plt.title('My histogram')
+plt.show()
+
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/4553d48d-5135-498b-8298-35bde4c5bd1a)
+
+
+### boxplot
+
+```
+import matplotlib.pyplot as plt
 import numpy as np
-x=[1,2,3,4,5]
-y1=[10, 12, 14, 16, 18]
-y2=[5,7,9, 11, 13]
-y3=[2,4,6,8,10]
-pit.fill_between(x, y1, color='maroon')
-plt.fill_between(x, y2, color='orange') 
-plt.plot(x, y1, color='red')
-plt.plot(x, y2, c
+np.random.seed(0)
+data=np.random.normal(loc=0,scale=1,size=100)
+data
+
+```
+
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/5ee92819-726b-4314-8755-6fa9c4a27b4d)
+
+```
+fig,ax=plt.subplots()
+ax.boxplot(data)
+ax.set_xlabel('Data')
+ax.set_ylabel('Values')
+ax.set_title('Box plot'
+```
 
 
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/fa0d26b7-f04b-45a1-8879-b4165a717fb0)
 
+### pie chart
 
+```
+labels='Python','C++','Ruby','Java'
+sizes=[215,130,245,210]
+colors=['gold','yellowgreen','lightcoral','lightskyblue']
+explode=(0,0.4,0,0.5)
+plt.pie(sizes,explode=explode,labels=labels,colors=colors,
+autopct='%1.1f%%',shadow=True)
+plt.axis('equal')
+plt.show()
 
+```
 
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/d561d300-95bc-4ce4-bde3-7b983c9c1576)
 
+```
+activities=['eat','sleep','work','play']
+slices=[3,7,8,6]
+colors=['r','y','g','b']
+plt.pie(slices,labels=activities,colors=colors,
+        startangle=90,shadow=True,explode=(0,0,0.1,0),
+        radius=1.2,autopct='%1.1f%%')
+plt.legend()
 
+```
 
+![image](https://github.com/KayyuruTharani/EXNO-5-DS/assets/142209319/276099eb-e297-47a1-a8d9-aa39183c8464)
 
 
 
 # Result:
- Include your result here
+  To Perform Data Visualization using matplot python library for the given datas is successful.
